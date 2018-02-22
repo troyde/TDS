@@ -3,12 +3,6 @@ version: '3'
 services:
   db:
     image: mysql
-  environment:
-    MYSQL_DATABASE: "test"
-    MYSQL_USER: "test"
-    MYSQL_PASSWORD: "test"
-    MYSQL_ROOT_PASSWORD: "root"
-    MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
   web:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
