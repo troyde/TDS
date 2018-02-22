@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 's3h@^^7^=tk7_%43gky(=n6vy=u_5)0)zh63$0lh^&923%$9!h'
+SECRET_KEY = '@g&q0n5w)zs9yrh@ha%9czk-3lygymt)ji)wnk-1_(c+^3&w@8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -74,13 +74,13 @@ WSGI_APPLICATION = 'TDS.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tds',
-        'USER': 'tdsuser',
-        'PASSWORD': 'tdspassword',
-        'HOST': 'db',
-        'PORT': '3306',
+'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'django1',
+    'USER': 'django',
+    'PASSWORD': 'password',
+    'HOST': 'db',
+    'PORT': 3306,
     }
 }
 
