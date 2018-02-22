@@ -80,7 +80,7 @@ DATABASES = {
         'USER': 'tdsuser',
         'PASSWORD': 'tdspassword',
         'HOST': 'db',
-        'PORT': '5432',
+        'PORT': '3306',
     }
 }
 
