@@ -2,8 +2,6 @@ version: '3'
 services:
   db:
      image: mysql:5.7
-     volumes:
-       - dbdata:/var/lib/mysql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: tdspassword
@@ -19,4 +17,3 @@ services:
       - "8000:8000"
     depends_on:
       - db
-      dbdata:
