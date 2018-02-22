@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tds',
         'USER': 'tdsuser',
-        'PASSWORD': 'password',
+        'PASSWORD': 'tdspassword',
         'HOST': 'db',
         'PORT': '5432',
     }
