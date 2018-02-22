@@ -1,11 +1,8 @@
 version: '3'
 
 services:
-  database:
+  db:
     image: mysql
-    container_name: tdsdb.dev
-     ports:
-     - "3306:3306"
   environment:
     MYSQL_DATABASE: "test"
     MYSQL_USER: "test"
