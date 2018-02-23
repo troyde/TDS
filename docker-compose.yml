@@ -22,16 +22,6 @@ services:
 
   migration:
     build: .
-    command: python manage.py makemigrations
-    volumes:
-      - .:/code
-    links:
-      - db
-    depends_on:
-      - db
-
-  migration2:
-    build: .
     command: python manage.py migrate
     volumes:
       - .:/code
@@ -39,11 +29,9 @@ services:
       - db
     depends_on:
       - db
+
   usercreation:
-    build: .
     command: python manage.py createsuperuser
-    volumes:
-      - .:/code
     links:
       - db
     depends_on:
