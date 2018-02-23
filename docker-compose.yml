@@ -8,7 +8,7 @@ services:
       MYSQL_ROOT_PASSWORD: mypassword
       MYSQL_USER: root
       MYSQL_PASSWORD: mypassword
-      MYSQL_DATABASE: django-test
+      MYSQL_DATABASE: tds
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
