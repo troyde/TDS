@@ -11,6 +11,8 @@ services:
       MYSQL_DATABASE: tds
   web:
     build: .
+    command: python manage.py migrate
+    command: phtyon manage.py creaatesuperuser -- email troyde@gmail.com --username troyde
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
