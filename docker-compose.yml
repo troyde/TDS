@@ -41,7 +41,7 @@ services:
       - db
   usercreation:
     build: .
-    command: python manage.py createsuperuser --email "troyde@gmail.com" --username "troyde"
+    command: python manage.py createsuperuser
     volumes:
       - .:/code
     links:
