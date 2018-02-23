@@ -22,7 +22,7 @@ services:
 
   migration:
     build: .
-    command: python manage.py migrate
+    command: python manage.py makemigrations
     volumes:
       - .:/code
     links:
@@ -30,6 +30,15 @@ services:
     depends_on:
       - db
 
+  migration2:
+    build: .
+    command: python manage.py migrate
+    volumes:
+      - .:/code
+    links:
+      - db
+    depends_on:
+      - db
   usercreation:
     build: .
     command: python manage.py createsuperuser --email "troyde@gmail.com" --username "troyde"
