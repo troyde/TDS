@@ -10,7 +10,11 @@ services:
       MYSQL_PASSWORD: mypassword
       MYSQL_DATABASE: tds
 
-migration:
+
+
+web:
+
+    migration:
     build: .
     command: python manage.py migrate
     volumes:
@@ -19,7 +23,7 @@ migration:
       - db
     depends_on:
       - db
-web:
+
     build: .
     command: python manage.py runserver 0.0.0.0:8000
 
@@ -29,7 +33,6 @@ web:
       - "8000:8000"
     depends_on:
       - db
-
 
 
   usercreation:
