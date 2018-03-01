@@ -31,12 +31,14 @@ services:
       - db
 
   usercreation:
+    build: .
     command: python manage.py createsuperuser
+    volumes:
+      - .:/code
     links:
       - db
     depends_on:
       - db
-
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
