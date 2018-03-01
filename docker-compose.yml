@@ -10,7 +10,7 @@ services:
       MYSQL_PASSWORD: mypassword
       MYSQL_DATABASE: tds
 
-  migration:
+migration:
     build: .
     command: python manage.py migrate
     volumes:
