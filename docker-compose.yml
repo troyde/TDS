@@ -9,21 +9,7 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: mypassword
       MYSQL_DATABASE: tds
-
-
-
-web:
-
-    migration:
-    build: .
-    command: python manage.py migrate
-    volumes:
-      - .:/code
-    links:
-      - db
-    depends_on:
-      - db
-
+  web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
 
@@ -33,9 +19,10 @@ web:
       - "8000:8000"
     depends_on:
       - db
-    usercreation:
+
+  migration:
     build: .
-    command: python manage.py createsuperuser
+    command: python manage.py migrate
     volumes:
       - .:/code
     links:
@@ -43,7 +30,15 @@ web:
     depends_on:
       - db
 
-    phpmyadmin:
+  usercreation:
+    command: python manage.py createsuperuser
+    links:
+      - db
+    depends_on:
+      - db
+
+
+  phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
       - PMA_ARBITRARY=1
