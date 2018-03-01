@@ -33,9 +33,7 @@ web:
       - "8000:8000"
     depends_on:
       - db
-
-
-  usercreation:
+    usercreation:
     build: .
     command: python manage.py createsuperuser
     volumes:
@@ -45,7 +43,7 @@ web:
     depends_on:
       - db
 
-  phpmyadmin:
+    phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
       - PMA_ARBITRARY=1
