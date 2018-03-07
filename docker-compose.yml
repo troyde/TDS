@@ -20,6 +20,26 @@ services:
     depends_on:
       - db
 
+  migration:
+    build: .
+    command: python manage.py migrate
+    volumes:
+      - .:/code
+    links:
+      - db
+    depends_on:
+      - db
+
+  usercreation:
+    build: .
+    command: python manage.py createsuperuser
+    volumes:
+      - .:/code
+    links:
+      - db
+    depends_on:
+      - db
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
@@ -29,4 +49,3 @@ services:
       - 8082:80
     volumes:
       - /sessions
-
