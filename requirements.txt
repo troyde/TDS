@@ -1,5 +1,5 @@
-MySQL-python
 ConfigParser
+MySQL-python
 Django==1.9.8
 argcomplete==1.8.2
 autopep8==1.2.4
