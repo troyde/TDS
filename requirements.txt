@@ -14,3 +14,4 @@ django-grappelli==2.9.1
 django-image-cropping==1.0.4
 django-mptt==0.8.6
 djangorestframework
+mysql-python
