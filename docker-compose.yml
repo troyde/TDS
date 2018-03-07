@@ -12,34 +12,12 @@ services:
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
-
     volumes:
       - .:/code
     ports:
       - "8000:8000"
     depends_on:
       - db
-
-  migration:
-    build: .
-    command: python manage.py migrate
-    volumes:
-      - .:/code
-    links:
-      - db
-    depends_on:
-      - db
-
-  usercreation:
-    build: .
-    command: python manage.py createsuperuser
-    volumes:
-      - .:/code
-    links:
-      - db
-    depends_on:
-      - db
-
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
@@ -49,5 +27,4 @@ services:
       - 8082:80
     volumes:
       - /sessions
-    depends_on:
-      - db
+
