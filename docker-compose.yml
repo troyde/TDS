@@ -10,7 +10,6 @@ services:
       MYSQL_PASSWORD: Esoteric
       MYSQL_DATABASE: tds
   project:
-    build: .
     command: django-admin.py startproject tutorial .
     volumes:
       - .:/code
