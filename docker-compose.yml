@@ -49,3 +49,5 @@ services:
       - 8082:80
     volumes:
       - /sessions
+    depends_on:
+      - db
