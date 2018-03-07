@@ -1,4 +1,5 @@
 Django==1.9.8
+djangorestframework
 argcomplete==1.8.2
 autopep8==1.2.4
 beautifulsoup4==4.5.3
@@ -13,5 +14,4 @@ django-filter==1.0.0
 django-grappelli==2.9.1
 django-image-cropping==1.0.4
 django-mptt==0.8.6
-djangorestframework
 websocket-client
