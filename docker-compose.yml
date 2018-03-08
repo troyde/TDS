@@ -27,7 +27,7 @@ services:
       - 8082:80
     volumes:
       - /sessions
-  visualizer:
+   visualizer:
     image: dockersamples/visualizer:stable
     ports:
       - "8080:8080"
@@ -36,3 +36,7 @@ services:
     deploy:
       placement:
         constraints: [node.role == manager]
+    networks:
+      - webnet
+  networks:
+    webnet:
